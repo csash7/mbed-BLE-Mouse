@@ -1,0 +1,32 @@
+#######################################
+# Syntax Coloring Map For mbed BLE Mouse
+#######################################
+# Class
+#######################################
+
+HIDMouse	KEYWORD1
+
+#######################################
+# Methods and Functions
+#######################################
+
+begin	KEYWORD2
+click	KEYWORD2
+move	KEYWORD2
+press	KEYWORD2
+release	KEYWORD2
+isPressed	KEYWORD2
+isConnected	KEYWORD2
+setManufacturerName	KEYWORD2
+setDeviceName	KEYWORD2
+setBatteryLevel	KEYWORD2
+
+#######################################
+# Constants
+#######################################
+
+MOUSE_BUTTON_LEFT	LITERAL1
+MOUSE_BUTTON_RIGHT	LITERAL1
+MOUSE_BUTTON_MIDDLE	LITERAL1
+MOUSE_BUTTON_BACK	LITERAL1
+MOUSE_BUTTON_FORWARD	LITERAL1
