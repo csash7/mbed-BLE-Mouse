@@ -21,7 +21,7 @@ void setup() {
 }
 
 void loop() {
-  if(bleMouse.isConnected()) {
+  while(bleMouse.isConnected()) {
   digitalWrite(LED_BUILTIN, HIGH);
   bleMouse.move(0,0,1);
   delay(1000);
