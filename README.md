@@ -55,4 +55,4 @@ See [examples](examples) folder.
 
 ## License
 
-This library is [licensed](LICENSE) under the [APACHE Licence](http://www.apache.org/licenses/LICENSE-2.0).
+This library is [licensed](LICENSE-2.0.txt) under the [APACHE Licence](http://www.apache.org/licenses/LICENSE-2.0).
