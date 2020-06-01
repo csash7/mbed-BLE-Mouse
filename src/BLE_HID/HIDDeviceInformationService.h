@@ -1,4 +1,4 @@
-/* mbed Microcontroller Library
+/*  mbed Microcontroller Library
  * Copyright (c) 2006-2013 ARM Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +21,7 @@
 
 #include "HID_types.h"
 
-/**
-* @class HIDDeviceInformationService
-* @brief BLE Device Information Service <br>
-* Service: https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.device_information.xml <br>
-* Manufacturer Name String Char: https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.manufacturer_name_string.xml
-*/
+
 class HIDDeviceInformationService {
 public:
     /**
@@ -104,7 +99,7 @@ public:
         pnpIDCharacteristic(GattCharacteristic::UUID_PNP_ID_CHAR,
                             PnPID)
     {
-        static bool serviceAdded = false; /* We should only ever need to add the heart rate service once. */
+        static bool serviceAdded = false; 
         if (serviceAdded) {
             return;
         }
@@ -119,11 +114,6 @@ public:
         GattService         deviceInformationService(GattService::UUID_DEVICE_INFORMATION_SERVICE, charTable,
                                                      sizeof(charTable) / sizeof(GattCharacteristic *));
 
-        /*
-         * This is a hack to make things work on MacOSX 10.10. I don't have the details, but MacOSX
-         * 10.10 gets confused when only characteristics from HID Service require security...
-         */
-        //pnpIDCharacteristic.setReadSecurityRequirement(ble::att_security_requirement_t::UNAUTHENTICATED);
         ble.gattServer().addService(deviceInformationService);
         serviceAdded = true;
     }
