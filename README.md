@@ -39,8 +39,7 @@ void loop() {
  ## Installation
 ### Using the Arduino IDE Library Manager
 
-1. Choose `Sketch` -> `Include Library` -> `Add .ZIP Library...`
-2. Select the library downloaded from GitHub as ZIP.
+1. Choose `Tools` -> `Manage Libraries` -> `Mbed BLE Mouse`
 
 ### Using Git
 
