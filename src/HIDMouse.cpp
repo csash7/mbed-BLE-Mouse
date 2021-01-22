@@ -157,7 +157,7 @@ HIDMouse::HIDMouse(BLE &ble): BLEMouse(ble),
     
 
         ble_error_t error = _ble.gap().setAdvertisingParameters(
-            GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED,
+            ble::advertising_type_t::CONNECTABLE_UNDIRECTED,
             adv_parameters
         );
 
